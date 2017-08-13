@@ -1,0 +1,10 @@
+1) I get 103657 terms in the corpus, so I decide to set 0,001 of them to be as stop words.
+
+2) get the intersection of list of term that has top-100 TermFreq and list of term that has top-100 DocFreq as the part of
+as the part of stop words, and combine them with top10-DocFreq terms.
+since top words will have both high TermFreq and DocFreq, so I decide to choose intersection, and some words like top10-DocFreq terms
+nearly in every docs, so I decide to set them as stopwords too
+
+as we can see from the stopwords list, most of them are functional words, "wikipedia" is in there because it is in every
+document's title
+

@@ -1,0 +1,62 @@
+******************* READ ME *******************
+
+To run these code, you need to make sure your python version is 2.7.10
+
+1. for running task1.py u need to install these libraries :  os , re , io , bs4 , py2casefold
+
+the design and strategy for this task is :
+
+1) Check the DOM and use "beautiful soup" to remove some useless contents
+2) after get the text of the article, split it into single words list, remove punctuation except ',' , '.' and '-'
+3) use regular expression to remove ',' , '.' and '-' in some words.
+4) combine cleaned list into article and output
+
+2. for running task2.py u need to install these libraries :  os , re , json
+
+the design and strategy for this task is :
+
+1) for getting n-gram inverted lists, I choose to use two layer dictionary data structure, the outer layer's key is
+word and value is dictionary of {documentID : termFrequency}, the inner layer's key is documentID, value is termFrequency
+e.g. { 'the' : {id1 : freq1, id2:freq2 ,...} 'a' : {id1 : freq1, id2:freq2 ,...} }
+2) use dictionary structure to store the number of tokens in each document
+3) keep these two kind of dictionary in JSON file type, for convenient read back
+
+3. for running task3.py u need to install these libraries :  io , prettytable , json
+
+the design and strategy for this task is :
+1) read JSON files back , count and output termFreq and docFreq
+
+---for running task-3-stopword.py u need to install these libraries :  json , io
+
+the design and strategy for this task is :
+
+1) read JSON files back , get the list of term that has top-100 TermFreq and get the list of term that has top-100 DocFreq
+2) get the intersection of list of term that has top-100 TermFreq and list of term that has top-100 DocFreq
+3) the intersection combines top10-DocFreq terms will be the stoplist
+
+## explanation for stoplist in another txt file
+
+4. for running zipf.py u need to install these libraries :  __future__ , pylab, collections, json
+
+to draw "Zipf plot for 1-gram ", u need to open and read json file 'task2/1-gram.json'
+to draw "Zipf plot for 2-gram ", u need to open and read json file 'task2/2-gram.json'
+to draw "Zipf plot for 3-gram ", u need to open and read json file 'task2/3-gram.json'
+you can change the title of the graph in title("Zipf plot for 1-gram ")
+
+
+
+=========================================================================================================
+
+You can run any python file in the submitted folder by using command line "python theNameOfTheFile.py"
+
+like run 'webCrawler HW1.py', u type "python webCrawler HW1.py"
+
+To make sure u get the exactly the required result of the tasks in the output txt-files, u can rename
+
+or remove the submitted files,
+
+or you can change the output files' name in the code line "f = open("theNameOfTheFile.txt", "a")"
+
+or clean the contents in them, before you run the python file, otherwise you will get duplicate result than expected,
+
+thank you.
